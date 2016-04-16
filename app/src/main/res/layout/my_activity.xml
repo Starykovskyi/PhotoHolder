@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MyActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayoutgesamt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <!-- Activity Layout-->
+
+        <FrameLayout
+            android:id="@+id/activitylayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            >
+
+            <!-- INFORMATION (Commit 16.05.2015)
+            schreibt die Zeile  android:fitsSystemWindows="true"  besser bei der ToolBar,
+            und NICHT beim ganzen Layout, damit die Transparente Statusleise die Farbe der ToolBar erhält! :)
+            -->
+
+
+        </FrameLayout>
+
+
+        <!-- Drawer Layout -->
+
+        <RelativeLayout
+            android:id="@+id/drawerlayoutsingle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start"
+            android:background="#fff">
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:headerLayout="@layout/headerlayout"
+                app:itemIconTint="@color/itemtint"
+                app:itemTextColor="@color/itemtint"
+                app:menu="@menu/navigation_view_menu" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>
